@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    // Prompt user to input movie details
+    // input movie details
     string movieName;
     double adultTicketPrice, childTicketPrice, grossAmount;
     int numAdultTickets, numChildTickets;
