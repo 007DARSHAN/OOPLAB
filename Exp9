@@ -1,0 +1,55 @@
+#include <iostream>
+
+// Base class
+class Shape {
+protected:
+    int width;
+    int height;
+public:
+    Shape(int w, int h) : width(w), height(h) {}
+
+    virtual int area() {
+        std::cout << "Parent class area :" << std::endl;
+        return 0;
+    }
+};
+
+// Derived class
+class Rectangle : public Shape {
+public:
+    Rectangle(int w, int h) : Shape(w, h) {}
+
+    int area() override {
+        std::cout << "Rectangle class area :" << std::endl;
+        return (width * height);
+    }
+};
+
+// Derived class
+class Triangle : public Shape {
+public:
+    Triangle(int w, int h) : Shape(w, h) {}
+
+    int area() override {
+        std::cout << "Triangle class area :" << std::endl;
+        return (width * height / 2);
+    }
+};
+
+int main() {
+    Shape *shape;
+    Rectangle rec(10, 7);
+    Triangle tri(10, 5);
+
+    // store the address of Rectangle
+    shape = &rec;
+    // call rectangle area.
+    std::cout << "Rectangle area: " << shape->area() << std::endl;
+
+    // store the address of Triangle
+    shape = &tri;
+    // call triangle area.
+    std::cout << "Triangle area: " << shape->area() << std::endl;
+
+    return 0;
+}
