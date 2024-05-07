@@ -4,7 +4,6 @@
 using namespace std;
 
 int main() {
-    // input movie details
     string movieName;
     double adultTicketPrice, childTicketPrice, grossAmount;
     int numAdultTickets, numChildTickets;
@@ -23,16 +22,12 @@ int main() {
     cout << "Enter the percentage of the gross amount to be donated to the charity: ";
     cin >> donationPercentage;
 
-    // Calculate gross amount
     grossAmount = (adultTicketPrice * numAdultTickets) + (childTicketPrice * numChildTickets);
 
-    // Calculate donation amount
     double donationAmount = (donationPercentage / 100) * grossAmount;
 
-    // Calculate net amount after donation
     double netAmount = grossAmount - donationAmount;
 
-    // Display the result with dots inserted
     cout << fixed << setprecision(2);
     cout << left << setw(25) << "Movie Name: " << setw(25) << setfill('.') << movieName << endl;
     cout << left << setw(25) << "Gross Amount: " << "$" << setw(24) << setfill('.') << grossAmount << endl;
