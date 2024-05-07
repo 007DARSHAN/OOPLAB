@@ -96,7 +96,6 @@ public:
         this->quantity = quantity;
     }
 
-    // Setters and getters
     void setQuantity(int q) {
         quantity = q;
     }
@@ -141,7 +140,6 @@ public:
     }
 
     void addNode(Node *newNode) {
-        // Implementation to add node to the linked list
         if (head == nullptr) {
             head = newNode;
         } else {
@@ -154,7 +152,6 @@ public:
     }
 
     void deleteNode(Node *nodeToDelete) {
-        // Implementation to delete node from the linked list
         if (head == nullptr) {
             return;
         }
@@ -175,10 +172,8 @@ public:
     }
 
     void traverse() {
-        // Implementation to traverse the linked list
         Node *temp = head;
         while (temp != nullptr) {
-            // Process node data
             temp = temp->next;
         }
     }
@@ -190,7 +185,6 @@ private:
 
 public:
     Cart() {
-        // Initialize the cart
     }
 
     void addProduct(Node *newNode) {
@@ -206,15 +200,13 @@ public:
     }
 
     void generateBill() {
-        // Implementation to generate bill
     }
 
     void displayBill() {
-        // Implementation to display bill
     }
 };
 
 int main() {
-    // You can create instances of Product, PurchasedProduct, Node, LinkedList, and Cart and perform operations accordingly.
+  
     return 0;
 }
